@@ -1,0 +1,16 @@
+-- Severity Index (example)
+Severity Index = 
+VAR FatalWeight = 5
+VAR InjuryWeight = 2
+RETURN
+DIVIDE(
+  SUMX(Accidents, Accidents[total_fatalities] * FatalWeight + Accidents[total_injuries] * InjuryWeight),
+  COUNTROWS(Accidents)
+)
+
+-- Incidents per 100k population (requires population table join)
+Incidents per 100k = 
+DIVIDE(
+  COUNTROWS(Accidents) * 100000,
+  RELATED(Geo[population])
+)

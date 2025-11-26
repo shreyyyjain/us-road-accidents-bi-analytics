@@ -1,0 +1,24 @@
+# Power BI temp files
+*.pbix.cache
+*.pbix.dat
+*.tmp
+
+# Local environment
+*.env
+.env.*
+
+# Auth keys
+*.json
+*.p12
+
+# IDE
+/.vscode/
+/.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data dumps (only allow samples)
+data/raw_*.csv
+data/full_*.csv
